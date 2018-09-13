@@ -2,17 +2,31 @@
 
 Given a time in -hour AM/PM format, convert it to military (24-hour) time.
 
-# Description
+**Description**
 
 This project was written as a Spring Boot / Jersey Rest Application with Swagger documentation and built with Maven because it seemed fitting.
 
-After you have started this application please use your browser and goto:
+**To checkout the project:**
+
+git clone https://github.com/mebis/TimeConversionProblem
+
+**To build the project:**
+
+cd TimeConversionProblem<br>
+mvn clean install
+
+**To start the application:**
+
+cd target<br>
+java -jar TimeConversionProblem-0.0.1.war
+
+**After you have started this application please use your browser and goto:**
 
 http://localhost:8001
 
 There you will see the Swagger rest service front end with one GET call for the time conversion function.
 
-# TESTS
+**TESTS**
 
 Tests were written for cases provided in the problem description:
 
