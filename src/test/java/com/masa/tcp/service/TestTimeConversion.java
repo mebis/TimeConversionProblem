@@ -47,6 +47,11 @@ public class TestTimeConversion {
 		Assert.assertTrue("19:05:45".equals(date));
 		
 		logger.info("07:05:45PM is: "+date);
+		
+		date = service.convertTime("07:05:45:PM");
+		Assert.assertTrue("19:05:45".equals(date));
+		
+		logger.info("07:05:45:PM is: "+date);
 	}
 	
 	@Test(expected = ParseException.class)

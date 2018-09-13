@@ -33,7 +33,7 @@ public class Endpoint {
 	@GET
 	@Path("{time}")
 	@Produces("text/plain")
-	@ApiOperation(value="Convert input time of format hh:mm:ss(AM|PM) to HH:mm:ss so it is in 24 hour clock.")
+	@ApiOperation(value="Convert input time of format hh:mm:ss:?(A|P)M to HH:mm:ss so it is in 24 hour clock.")
 	public String convertTime(@ApiParam(value = "A string time representation in this format: hh:mm:ss(AM|PM)", required = false)@PathParam("time") String time) throws ParseException {
 		return service.convertTime(time);
 	}

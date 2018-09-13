@@ -33,5 +33,6 @@ Tests were written for cases provided in the problem description:
 12:00:00AM becomes 00:00:00<br>
 12:00:00PM becomes 12:00:00<br>
 07:05:45PM becomes 19:05:45<br>
+07:05:45:PM becomes 19:05:45<br>
 
 Error test cases were written also for bad hours, minutes, seconds and AM/PM.
