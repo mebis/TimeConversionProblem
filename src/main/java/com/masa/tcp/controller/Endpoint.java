@@ -14,6 +14,8 @@ import org.springframework.stereotype.Component;
 import com.masa.tcp.service.Service;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
 @Component
 @Path("/tcp")
@@ -31,7 +33,8 @@ public class Endpoint {
 	@GET
 	@Path("{time}")
 	@Produces("text/plain")
-	public String convertTime(@PathParam("time") String time) throws ParseException {
+	@ApiOperation(value="Convert input time of format hh:mm:ss(AM|PM) to HH:mm:ss so it is in 24 hour clock.")
+	public String convertTime(@ApiParam(value = "A string time representation in this format: hh:mm:ss(AM|PM)", required = false)@PathParam("time") String time) throws ParseException {
 		return service.convertTime(time);
 	}
 
